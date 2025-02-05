@@ -1,0 +1,192 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: white;
+    text-align: center;
+    overflow-x: hidden;
+    transition: background 0.1s ease-in-out;
+}
+
+body {
+    background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), #ff0080, #6600ff, #000);
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('background_6.jpg') no-repeat center center/cover;
+    z-index: -1;
+    filter: blur(3px) brightness(0.8);
+}
+
+header {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    font-size: 32px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+    animation: glow 1.5s infinite alternate;
+}
+
+@keyframes glow {
+    0% { text-shadow: 0 0 10px #ff0080, 0 0 20px #ff0080; }
+    100% { text-shadow: 0 0 20px #ff00ff, 0 0 40px #ff00ff; }
+}
+
+section {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 50px 20px;
+    margin: 20px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 0.8s ease-in-out;
+}
+
+section.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+section.active:hover {
+    animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(2px); }
+    50% { transform: translateX(-2px); }
+    75% { transform: translateX(2px); }
+    100% { transform: translateX(0); }
+}
+
+.village-item {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    cursor: pointer;
+}
+
+.village-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.5);
+}
+
+.village-item img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+    border: 3px solid white;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.village-item img:hover {
+    transform: scale(1.1) rotate(2deg);
+    filter: brightness(1.2);
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.4);
+}
+
+button {
+    background: linear-gradient(45deg, #ff0080, #ff6600);
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.4s ease;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+button::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.3s ease-out;
+    border-radius: 50%;
+}
+
+button:active::after {
+    transform: translate(-50%, -50%) scale(1);
+}
+
+button:hover {
+    background: linear-gradient(45deg, #ff6600, #ff0080);
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}
+
+#chatbox {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#username, #message {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.3);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+#username:focus, #message:focus {
+    background: rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+    section {
+        width: 95%;
+        padding: 30px 10px;
+    }
+
+    .village-item img {
+        max-width: 300px;
+    }
+}
+
+.language-switcher {
+    margin-top: 10px;
+}
+
+.language-switcher button {
+    background: linear-gradient(45deg, #ff0080, #ff6600);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    margin: 5px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.language-switcher button:hover {
+    background: linear-gradient(45deg, #ff6600, #ff0080);
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+}

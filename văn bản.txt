@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Làng Nghề Truyền Thống Bến Tre</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+
+    <header>
+         <h1 id="page-title">Làng Nghề Truyền Thống Bến Tre</h1>
+    <div class="language-switcher">
+        <button onclick="changeLanguage('vi')">🇻🇳 Tiếng Việt</button>
+        <button onclick="changeLanguage('en')">🇬🇧 English</button>
+    </div>
+    </header>
+
+    <section id="craft-villages">
+        <h2>Danh Sách Các Làng Nghề</h2>
+        <div class="village-list">
+
+            <div class="village-item">
+                <h3>1. Làng Nghề Kẹo Dừa (Xã Sơn Đông, TP. Bến Tre)</h3>
+                <p><strong>Hình thành từ:</strong> Đầu thế kỷ 20.</p>
+                <p><strong>Cách làm:</strong> Dừa tươi được nạo cơm, ép lấy nước cốt, nấu với đường và mạch nha.</p>
+                <p><strong>Đặc trưng:</strong> Kẹo dừa dẻo, thơm tự nhiên.</p>
+                <p><strong>Ý nghĩa:</strong> Thể hiện sự sáng tạo và tận dụng nguồn nguyên liệu sẵn có của người dân.</p>
+                <img src="https://www.keodua.vn/site/wp-content/uploads/2019/04/keo-dua-ben-tre-2.jpg" alt="Kẹo dừa Bến Tre">
+            </div>
+
+            <div class="village-item">
+                <h3>2. Làng Nghề Thủ Công Mỹ Nghệ Từ Dừa (Xã Hữu Định, Huyện Châu Thành)</h3>
+                <p><strong>Hình thành từ:</strong> Hơn 100 năm trước.</p>
+                <p><strong>Cách làm:</strong> Gáo dừa được chạm khắc thành cốc, chén, tượng nghệ thuật.</p>
+                <p><strong>Đặc trưng:</strong> Sản phẩm bền, đẹp.</p>
+                <p><strong>Ý nghĩa:</strong> Tận dụng tối đa cây dừa, giúp phát triển kinh tế bền vững.</p>
+                <img src="https://mia.vn/media/uploads/blog-du-lich/ngo-ngang-do-thu-cong-my-nghe-tu-go-dua-ben-tre-cuc-an-tuong-01-1664900387.jpeg" alt="Đồ thủ công từ dừa">
+            </div>
+
+            <div class="village-item">
+                <h3>3. Làng Nghề Dệt Chiếu (Xã Nhơn Thạnh, TP. Bến Tre)</h3>
+                <p><strong>Hình thành từ:</strong> Hơn 200 năm.</p>
+                <p><strong>Cách làm:</strong> Sử dụng cói và lác để dệt thủ công thành chiếu.</p>
+                <p><strong>Đặc trưng:</strong> Chiếu dệt bền, hoa văn đẹp.</p>
+                <p><strong>Ý nghĩa:</strong> Gìn giữ nghề truyền thống lâu đời, gắn liền với đời sống người Việt.</p>
+                <img src="https://file1.dangcongsan.vn/data/0/images/2023/12/05/upload_2674/11-nghe-det-dinh-yen.jpg" alt="Chiếu dệt Bến Tre">
+            </div>
+
+            <div class="village-item">
+                <h3>4. Làng Nghề Làm Bánh Tráng (Xã Phú Ngãi, Huyện Ba Tri)</h3>
+                <p><strong>Hình thành từ:</strong> Hơn 150 năm.</p>
+                <p><strong>Cách làm:</strong> Bột gạo pha nước, tráng mỏng, phơi khô.</p>
+                <p><strong>Đặc trưng:</strong> Bánh tráng thơm, dẻo.</p>
+                <p><strong>Ý nghĩa:</strong> Đóng góp vào ẩm thực truyền thống, tạo việc làm cho nhiều hộ gia đình.</p>
+                <img src="https://cdn.thesaigontimes.vn/wp-content/uploads/2023/01/Banh-trang-3.jpg" alt="Bánh tráng Bến Tre">
+            </div>
+
+            <div class="village-item">
+                <h3>5. Làng Nghề Đan Lát (Xã An Thạnh, Huyện Mỏ Cày Nam)</h3>
+                <p><strong>Hình thành từ:</strong> Hơn 100 năm.</p>
+                <p><strong>Cách làm:</strong> Sử dụng tre, trúc để đan thành rổ, rá, giỏ.</p>
+                <p><strong>Đặc trưng:</strong> Sản phẩm chắc chắn, đẹp.</p>
+                <p><strong>Ý nghĩa:</strong> Tận dụng nguyên liệu tự nhiên, giúp bảo vệ môi trường.</p>
+                <img src="https://mttq.bentre.gov.vn/sites/default/files/inline-images/B%E1%BA%A3o%20t%E1%BB%93n.jpg" alt="Đan lát Bến Tre">
+            </div>
+
+        </div>
+    </section>
+
+    <section id="comments">
+        <h2>Bình luận</h2>
+        <div id="chatbox">
+            <div id="messages"></div>
+            <input type="text" id="username" placeholder="Tên của bạn">
+            <textarea id="message" placeholder="Nhập bình luận..."></textarea>
+            <button onclick="sendMessage()">Gửi</button>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Liên hệ</h2>
+        <p>Liên hệ với chúng tôi qua Zalo:</p>
+        <a href="https://zalo.me/g/ejbvli017" target="_blank">
+            <button class="zalo-button">Nhắn tin Zalo</button>
+        </a>
+    </section>
+
+</body>
+</html>
